@@ -26,11 +26,11 @@ app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
 const server = app.listen(process.env.PORT || 5000, () =>
-  console.log(`Server started on ${process.env.PORT || 5000}`)
+  console.log(`Server started on ${process.env.PORT || 5000 }`)
 );
 const io = socket(server, {
   cors: {
-    origin: "http://localhost:3000" || "https://chat-mern-client-phi.vercel.app",
+    origin: "http://localhost:3000",
     credentials: true,
   },
 });
